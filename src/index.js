@@ -1,5 +1,9 @@
 const app = require('./app') 
 const { connectToDatabase } = require('./controllers/user.controller.js') 
+const dotenv = require('dotenv')
+
+dotenv.config();
+
 
 const PORT = process.env.PORT || 8080
 

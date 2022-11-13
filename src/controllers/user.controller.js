@@ -4,11 +4,9 @@ const dotenv = require('dotenv')
 const bcrypt = require('bcrypt') 
 const jwt = require("jsonwebtoken")
 
-dotenv.config();
-
 const connectToDatabase = () => {
     try {
-        mongoose.connect(process.env.DB_URI)
+        mongoose.connect(process.env.MONGODB_URI)
         console.log(`Connected succesfully to MongoServer!!`)
     } catch (err) {
         throw err
