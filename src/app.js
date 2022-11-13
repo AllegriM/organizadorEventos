@@ -6,6 +6,7 @@ const router = require('./routes/routes.app.js')
 const swaggerUI = require('swagger-ui-express') 
 const swaggerJsDoc = require('swagger-jsdoc') 
 const options = require('./swaggerOptions.js') 
+const eventsRoutes = require('./routes/eventos/eventos.routes')
 
 const app = express()
 
@@ -16,10 +17,7 @@ app.use(express.json())
 
 const specs = swaggerJsDoc(options)
 
-// app.use(router)
-app.get('/events', (req, res) => {
-    res.send("Eventos")
-})
+app.use(eventsRoutes)
 app.use('/', (req, res) => {
     res.send('Hello World')
 })
