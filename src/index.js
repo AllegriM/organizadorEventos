@@ -1,5 +1,5 @@
-const app = require('./src/app') 
-const { connectToDatabase } = require('./src/controllers/user.controller.js') 
+const app = require('./app') 
+const { connectToDatabase } = require('./controllers/user.controller.js') 
 
 const PORT = process.env.PORT || 8080
 
