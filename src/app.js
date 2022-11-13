@@ -17,10 +17,7 @@ app.use(express.json())
 
 const specs = swaggerJsDoc(options)
 
-app.use(eventsRoutes)
-app.use('/', (req, res) => {
-    res.send('Hello World')
-})
+app.use(router)
 app.use('/docs', swaggerUI.serve, swaggerUI.setup(specs))
 
 
