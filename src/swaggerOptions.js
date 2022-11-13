@@ -1,3 +1,4 @@
+const path = require("path");
 
 const options = {
     definition: {
@@ -7,7 +8,7 @@ const options = {
             version: '1.0.0'
         },
     },
-    apis: ["C:\Users\Marco\Desktop\FrontEnd\React\back\src\routes\*js"]
+    apis: [path.join(__dirname, "./routes/*js")]
 }
 
 module.exports = options
