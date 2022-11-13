@@ -16,7 +16,10 @@ app.use(express.json())
 
 const specs = swaggerJsDoc(options)
 
-app.use(router)
+// app.use(router)
+app.get('/events', (req, res) => {
+    res.send("Eventos")
+})
 app.use('/', (req, res) => {
     res.send('Hello World')
 })
