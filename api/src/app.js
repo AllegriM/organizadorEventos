@@ -6,7 +6,6 @@ const router = require('./routes/routes.app.js')
 const swaggerUI = require('swagger-ui-express') 
 const swaggerJsDoc = require('swagger-jsdoc') 
 const options = require('./swaggerOptions.js') 
-const eventsRoutes = require('./routes/eventos/eventos.routes')
 
 const app = express()
 
