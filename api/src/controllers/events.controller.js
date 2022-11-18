@@ -75,35 +75,11 @@ const deleteEvent = async (req, res) => {
     }
 }
 
-const addToFavorite = async (req, res) => {
-    const eventId = req.params.id
-    console.log(eventId)
-    try {
-        const selectedEvent = await Events.findOne({ _id: eventId })
-        console.log(selectedEvent)
-    } catch (error) {
-
-    }
-}
-
-const removeFavorite = async (req, res) => {
-    const event = req.body
-    const eventId = req.body
-    try {
-        const selectedEvent = await Events.findOne({ _id: eventId })
-        console.log(selectedEvent)
-    } catch (error) {
-
-    }
-}
-
 
 module.exports = {
     getEvents,
     getEventById,
     createEvent,
     updateEvent,
-    deleteEvent,
-    addToFavorite,
-    removeFavorite
+    deleteEvent
 }
